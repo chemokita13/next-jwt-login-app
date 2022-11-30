@@ -1,27 +1,38 @@
-import React from "react";
+import { useState } from "react";
+import axios from "axios";
 
 function Login() {
+    const [credentials, setCredentials] = useState({
+        username: "",
+        password: "",
+    });
     const handleInputChange = (e) => {
-        console.log(e.target.value);
+        setCredentials({ ...credentials, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        await axios.post("/api/auth", credentials);
     };
 
     return (
         <div>
-            <form action="">
+            <form onSubmit={(e) => handleSubmit(e)}>
                 <input
                     type="text"
                     name="username"
-                    id=""
                     placeholder="Enter username: "
+                    onChange={(e) => handleInputChange(e)}
                 />
                 <input
                     type="password"
                     name="password"
-                    id=""
                     placeholder="Enter password: "
+                    onChange={(e) => handleInputChange(e)}
                 />
                 <button type="submit">Login</button>
             </form>
+            <a href="/privateDashboard">go to dashboard</a>
         </div>
     );
 }
