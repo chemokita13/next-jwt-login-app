@@ -15,6 +15,7 @@ export default function logout(req, res) {
             secure: process.env.NODE_ENV == "production",
             sameSite: "strict",
             maxAge: 0,
+            path: "/",
         });
         res.setHeader("Set-Cookie", serializedToken);
         res.status(200).json({ logout: true });

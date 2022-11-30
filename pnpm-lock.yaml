@@ -5,6 +5,7 @@ specifiers:
   cookie: ^0.5.0
   eslint: 8.28.0
   eslint-config-next: 13.0.5
+  jose: ^4.11.1
   jsonwebtoken: ^8.5.1
   next: 13.0.5
   react: 18.2.0
@@ -15,6 +16,7 @@ dependencies:
   cookie: 0.5.0
   eslint: 8.28.0
   eslint-config-next: 13.0.5_eslint@8.28.0
+  jose: 4.11.1
   jsonwebtoken: 8.5.1
   next: 13.0.5_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
@@ -1339,6 +1341,10 @@ packages:
 
   /isexe/2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
+    dev: false
+
+  /jose/4.11.1:
+    resolution: {integrity: sha512-YRv4Tk/Wlug8qicwqFNFVEZSdbROCHRAC6qu/i0dyNKr5JQdoa2pIGoS04lLO/jXQX7Z9omoNewYIVIxqZBd9Q==}
     dev: false
 
   /js-sdsl/4.2.0:
